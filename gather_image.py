@@ -8,7 +8,7 @@ cam = cv2.VideoCapture(0)
 cam.set(3, 640)  # set video width
 cam.set(4, 480)  # set video height
 
-face_detector = cv2.CascadeClassifier('/Users/Guru/Downloads/haarcascade_frontalface_default.xml')
+face_detector = cv2.CascadeClassifier('<Enter your XML file path here>')
 
 # For each person, enter one numeric face id
 face_id = input('\n enter user id end press <return> ==>  ')
@@ -28,7 +28,7 @@ while True:
         count += 1
 
         # Save the captured image into the datasets folder
-        cv2.imwrite("/Users/Guru/Downloads/datasets/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y + h, x:x + w])
+        cv2.imwrite("<Enter the path where you want to store the images>/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y + h, x:x + w]) #it will store as User.1.1.jpg, User1.2.jpg (where User.1 is the first person and User.1.1 is the first image captured
 
         cv2.imshow('image', img)
 
